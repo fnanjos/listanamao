@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- h componentes nativos do html
+	 f componentes especificos do JSF 
+	 p componentes do primeface-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SiG</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<!--criando o menu -->
+		<p:menu>
+			<!-- Criando um submenu dentro do menu criado anteriormente -->
+			<p:submenu label="Sistema">
+				<!-- Criando um item de menu dentro do submenu -->
+				<p:menuitem value="Sair"/>
+			</p:submenu>
+			
+			<p:submenu label="Cadastros">
+				<p:menuitem value="Bairro" url="/Pages/bairro.xhtml"/>
+				<p:menuitem value="Estabelecimento" url="/Pages/estabelecimento.xhtml"/>
+				<p:menuitem value="Marca" url="/Pages/marca.xhtml"/>
+				<p:menuitem value="Produto" url="/Pages/produto.xhtml"/>
+			</p:submenu>
+			
+			<p:submenu label="Movimentações">
+				<p:menuitem value="Produto/Estabelecimento"/>
+			</p:submenu>
+			
+			<p:submenu label="Ajuda">
+				<p:menuitem value="Sobre"/>
+			</p:submenu>
+		</p:menu>
+	</h:form>
+	
+</h:body>
+</html>

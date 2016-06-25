@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+"-//Hibernate/Hibernate Configuration-3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- Configurações de conexão com o Banco de Dados -->
+			<property name="connection.driver_class">org.postgresql.Driver</property>
+        	<property name="connection.username">postgres</property>
+        	<property name="connection.password">root</property>
+        	<property name="connection.url">jdbc:postgresql://localhost:5433/listanamao</property>
+			
+		<!-- Pool de Conexões -->
+			<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+			<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<!-- Gerenciamento do contexto das Sessões -->
+			<property name="current_session_context_class">thread</property>
+
+		<!-- Mostra as SQLs Geradas -->
+			<property name="show_sql">true</property>
+
+		<!-- Cria as tabelas do banco de dados -->
+			<property name="hbm2ddl.auto">validate</property>
+			
+		<!-- Mapeamento das classes -->
+			<mapping class="br.com.listanamao.domain.Bairro"/>
+			<mapping class="br.com.listanamao.domain.Estabelecimento"/>
+			<mapping class="br.com.listanamao.domain.Marca"/>
+			<mapping class="br.com.listanamao.domain.Produto"/>
+			<mapping class="br.com.listanamao.domain.ProdutoEstabelecimento"/>
+	</session-factory>
+
+</hibernate-configuration>
